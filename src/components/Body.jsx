@@ -15,7 +15,6 @@ const Body = () => {
 
 
   const fetchUser = async () => {
-    console.log("ERROR:!")
     try {
       const res = await axios.get(BASE_URL + "/profile/view", {
         withCredentials: true
@@ -30,9 +29,7 @@ const Body = () => {
   }
 
   useEffect(() => {
-    console.log("ERROR: in effect" + userData)
     if(!userData) {
-      console.log("ERROR: in effect")
       fetchUser();
     }  
   }, []);
