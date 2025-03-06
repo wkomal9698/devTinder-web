@@ -28,7 +28,8 @@ Get the feed and add feed to the store
 Build the user card on feed
 Edit profile feature
 Show toast message on save of profile
-See all my connections
+New Page - See all my connections
+New Page - See all my connection requests
 
 
 Body
