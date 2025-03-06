@@ -26,6 +26,10 @@ If token is not present, redirect user to login page
 Logout feature
 Get the feed and add feed to the store
 Build the user card on feed
+Edit profile feature
+Show toast message on save of profile
+See all my connections
+
 
 Body
     NavBar

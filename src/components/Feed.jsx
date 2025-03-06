@@ -26,7 +26,7 @@ const Feed = () => {
 
   return (
     <div className="flex flex-col justify-center my-auto">
-      {userFeed.map(card => <UserCard cardData={card} key={card?._id}/>)}</div>
+      {userFeed.map(card => <UserCard showRequestActions={true} cardData={card} key={card?._id}/>)}</div>
   )
 }
 
