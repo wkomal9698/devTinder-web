@@ -24,9 +24,14 @@ const Feed = () => {
     }
   }, [])
 
+  if(!userFeed)  return
+
+  if(userFeed.length <= 0) return <h1 className="flex justify-center my-10">No new users found!</h1>
+
   return (
-    <div className="flex flex-col justify-center my-auto">
-      {userFeed.map(card => <UserCard showRequestActions={true} cardData={card} key={card?._id}/>)}</div>
+    <div className="flex justify-center my-auto">
+      {userFeed.length && <UserCard showRequestActions={true} cardData={userFeed[0]} key={userFeed[0]?._id}/>}
+      </div>
   )
 }
 
