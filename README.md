@@ -41,3 +41,22 @@ Body
     Route=/login => Login
     Route=/connections => Connections
     Route=/profile => Profile
+
+
+# Deployment
+    Signup on AWS
+    Launch Instance
+    chmod 400 <secret>.pem
+    ssh -i "devTinder-secret.pem" ubuntu@ec2-13-61-32-49.eu-north-1.compute.amazonaws.com
+    Install Node version 20.18.0
+    Clone both frontend and backend code from GitHub - git clone
+    Frontend:
+        npm install -> install dependencies
+        npm run build
+        sudo apt update
+        sudo apt install nginx
+        sudo systemctl start nginx
+        sudo systemctl enable nginx
+        Copy code from dist(build files) to /var/www/html
+        sudo scp -r dist/* /var/www/html
+        Enable port :80 of your instance
