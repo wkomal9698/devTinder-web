@@ -60,3 +60,39 @@ Body
         Copy code from dist(build files) to /var/www/html
         sudo scp -r dist/* /var/www/html
         Enable port :80 of your instance
+    Backend:
+        Updated DB password
+        Allowed EC2 instance public IP on MongoDB server (whitelisting the IP)
+        Installed pm2 globally (npm install pm2 -g)
+        Started server (pm2 start npm -- start)
+        pm2 logs
+        pm2 list
+        pm2 flush <name>
+        pm2 stop <name>
+        pm2 delete <name>
+        pm2 start npm --name "devTinder-backend" -- start
+        config nginx path -> /etc/nginx/sites-available/default
+        Restart nginx (sudo systemctl restart nginx)
+        Modify the BASE_URL in frontend project to "/api"
+
+# Nginx config
+
+    Frontend: http://13.61.32.49/
+    Backend: http://13.61.32.49:3000/
+
+    Domain name = devtinder.com => 13.61.32.49
+
+    Frontend: http://devtinder.com/
+    Backend: http://devtinder.com:3000/ => http://devtinder.com/api
+
+    nginx config:
+
+    server_name 13.61.32.49;
+    location /api/ {
+            proxy_pass http://localhost:3000/;  # Forward requests to Node.js app
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+    }
