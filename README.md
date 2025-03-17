@@ -96,3 +96,12 @@ Body
             proxy_set_header Host $host;
             proxy_cache_bypass $http_upgrade;
     }
+
+# Adding a custom domain name
+
+    Purchased domain name from GoDaddy
+    Signup on CloudFlare and add a new domain name
+    Change the Nameservers on GoDaddy and point it to CloudFlare (important step)
+    Wait for sometime till your nameservers are updated (around 15 minutes)
+    Add DNS record: A devtinder.in 13.61.32.49
+    Enable SSL for website
