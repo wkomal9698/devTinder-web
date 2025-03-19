@@ -105,3 +105,19 @@ Body
     Wait for sometime till your nameservers are updated (around 15 minutes)
     Add DNS record: A devtinder.in 13.61.32.49
     Enable SSL for website
+
+# Sending Emails via SES
+
+    Create a IAM user
+    Give access to AmazonSESFullAccess
+    Amazon SES: Create an Identity
+    Verify your domain name
+    Verify an email address identity
+    Install AWS SDK v3
+    Code Example - https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/javascriptv3/example_code/ses#code-examples
+    Setup SesClient
+    Access Credentials should be created on IAM under SecurityCredentials tab
+    Add the credentials to the env file
+    Write code for SESClient
+    Write code for sendEmail
+    Make the email dynamic by passing more parameters to the run function
