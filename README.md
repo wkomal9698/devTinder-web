@@ -121,3 +121,33 @@ Body
     Write code for SESClient
     Write code for sendEmail
     Make the email dynamic by passing more parameters to the run function
+
+# Scheduling Cron jobs in NodeJS
+
+    Installing node-cron
+    Learning about cron expressions syntaxt - crontab.guru
+    Schedule a job
+    date-fns
+    Find all unique emailIds who have received connection requests the previous day
+    Send email
+    Explore different queue mechanisms to send bulk requests
+    Amazon SES bulk Emails
+    Make sendEmail function dynamic
+    bee-queue and bull npm packages
+
+# Razorpay Payment Gateway Integration
+
+    Sign up on Razorpay and complete KYC (Activation takes 3-5 days)
+    Created UI for premium page
+    Creating an API for create order in backend
+    Added my key and secret in .env file
+    Initialized RazorPay in utils
+    Creating order on razorpay
+    Created schema and model
+    Saved the order in payments collection
+    Make the order API dynamic
+    Setup Razorpay webhook on your live API
+    Ref - Razorpay gitHub : https://github.com/razorpay/razorpay-node/tree/master/documents
+    Ref - Razorpay steps to integrate : https://razorpay.com/docs/payments/server-integration/nodejs/integration-steps/#integrate-with-razorpay-payment-gateway
+    Ref - Verify webhook signature : https://razorpay.com/docs/webhooks/validate-test/
+    Ref - Payment payload in webhooks : https://razorpay.com/docs/webhooks/payloads/payments/
