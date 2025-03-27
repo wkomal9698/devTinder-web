@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
+import NavBar from "./NavBar"
 
 const Login = () => {
   const [emailId, setEmailId] = useState("");
@@ -51,6 +52,7 @@ const Login = () => {
       <div className="card bg-base-300 w-96 shadow-xl">
         <div className="card-body">
           <h2 className="card-title justify-center">{isLogin ? "Login" : "Sign Up"}</h2>
+          <h2 className="card-title justify-center">{console.log("same text")} Same text</h2>
           {!isLogin && <><label className="form-control w-full max-w-xs">
             <div className="label">
               <span className="label-text">First Name:</span>

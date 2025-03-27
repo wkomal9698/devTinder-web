@@ -1,5 +1,4 @@
 # DevTinder
-
 Created a Vite + React application
 Remove unnecessary code and create a Hello World app
 Install Tailwind CSS
@@ -76,7 +75,6 @@ Body
         Modify the BASE_URL in frontend project to "/api"
 
 # Nginx config
-
     Frontend: http://13.61.32.49/
     Backend: http://13.61.32.49:3000/
 
@@ -98,7 +96,6 @@ Body
     }
 
 # Adding a custom domain name
-
     Purchased domain name from GoDaddy
     Signup on CloudFlare and add a new domain name
     Change the Nameservers on GoDaddy and point it to CloudFlare (important step)
@@ -107,7 +104,6 @@ Body
     Enable SSL for website
 
 # Sending Emails via SES
-
     Create a IAM user
     Give access to AmazonSESFullAccess
     Amazon SES: Create an Identity
@@ -123,7 +119,6 @@ Body
     Make the email dynamic by passing more parameters to the run function
 
 # Scheduling Cron jobs in NodeJS
-
     Installing node-cron
     Learning about cron expressions syntaxt - crontab.guru
     Schedule a job
@@ -136,7 +131,6 @@ Body
     bee-queue and bull npm packages
 
 # Razorpay Payment Gateway Integration
-
     Sign up on Razorpay and complete KYC (Activation takes 3-5 days)
     Created UI for premium page
     Creating an API for create order in backend
@@ -151,3 +145,23 @@ Body
     Ref - Razorpay steps to integrate : https://razorpay.com/docs/payments/server-integration/nodejs/integration-steps/#integrate-with-razorpay-payment-gateway
     Ref - Verify webhook signature : https://razorpay.com/docs/webhooks/validate-test/
     Ref - Payment payload in webhooks : https://razorpay.com/docs/webhooks/payloads/payments/
+
+# Real time chat using Websocket (Library: socket.io)
+    Build the UI for a chat window on /chat/:targetUserId
+    Setup socket.io in backend
+    npm i socket.io
+    Setup frontend socket.io-client
+    Initialize the chat
+    createSocketConnection
+    Listen to events
+    Homework: Improve the UI
+    Homework: Fix security bug - Auth in web sockets
+    Homework: Fix bug - If I am not a connection, then I should not be able to send message
+    Homework: Feat: Show green symbol when online - [last Seen 2 hours ago - use timestamps]
+    Homework: Limit messages when fetching from DB - Load more on scroll up
+    For scalability, read about Redis
+
+# Project Ideas
+    Tic tac toe game
+    Chess game
+    TypeRacer game
